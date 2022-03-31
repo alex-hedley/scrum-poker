@@ -10,12 +10,12 @@
 
 - [Planning poker](https://en.wikipedia.org/wiki/Planning_poker)
 
-- [Acknowlegements](ACKNOWLEDGEMENTS.md)
+- [Acknowledgements](ACKNOWLEDGEMENTS.md)
 - [License](LICENSE)
 
 ## Site
 
-- [Deployed](https://alex-hedley.github.io/picker-wheel)
+- [Deployed](https://alex-hedley.github.io/scrum-poker)
 
 `python -m SimpleHTTPServer`
 
