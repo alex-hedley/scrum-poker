@@ -1,0 +1,18 @@
+
+/* Card */
+
+card-t > img {
+    height: 50px;
+    /* width: 10px; */
+}
+
+[data-toggled] {
+    /* display: none; */
+    /* color: red; */
+    /* background-color: green; */
+    /* border: 2px solid black; */
+}
+
+[data-toggled] > img {
+    border: 2px solid black;
+}
