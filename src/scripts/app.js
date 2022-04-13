@@ -61,6 +61,15 @@ function hide() {
         var col = rows[row].getElementsByTagName('td')
         col[1].style.display='none';
     }
+
+    var backs = document.querySelectorAll('#Deck card-t[hide]');
+    backs.forEach(c => {
+        c.removeAttribute('hide');
+        c.style.display = 'block';
+    });
+
+    var cards = document.querySelectorAll('#Deck card-t:not([rank="0"]');
+    cards.forEach(c => { c.toggleAttribute('hide'); });
 }
 
 function show() {
@@ -72,6 +81,15 @@ function show() {
         var col = rows[row].getElementsByTagName('td')
         col[1].style.display='';
     }
+
+    var backs = document.querySelectorAll('#Deck card-t:not([hide]');
+    backs.forEach(c => { 
+        c.toggleAttribute('hide');
+        c.style.display = 'none';
+    });
+
+    var hidden = document.querySelectorAll('#Deck card-t[hide]');
+    hidden.forEach(c => { c.toggleAttribute('hide'); });
 }
 
 function deleteEstimates() {
