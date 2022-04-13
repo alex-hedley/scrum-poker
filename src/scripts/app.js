@@ -11,16 +11,22 @@
 
     cardt.addEventListener('click', evt => {
         // BigCardt.firstChild.src = cardt.firstChild.src
+
+        // remove all from others
+        var selected = document.querySelectorAll('#Deck card-t[data-toggled]');
+        console.log('Toggled: ', selected.length);
+        selected.forEach(c => { c.toggleAttribute('data-toggled'); });
+
         var current = cardt.getAttribute('data-toggled');
         console.log(current);
         // cardt.setAttribute('data-toggled', !current);
         cardt.toggleAttribute('data-toggled');
-
+        
         var letters = cardt.getAttribute('letters');
         console.log(letters);
 
         var table, tr, filter;
-        filter = "Alex".toUpperCase();
+        filter = "Alex".toUpperCase(); // Get Current user of system.
         table = document.getElementById("results");
         tr = table.getElementsByTagName("tr");
         for (i = 0; i < tr.length; i++) {
@@ -65,5 +71,29 @@ function show() {
     for (var row=0; row < rows.length; row++) {
         var col = rows[row].getElementsByTagName('td')
         col[1].style.display='';
+    }
+}
+
+function deleteEstimates() {
+    var table, tr;
+    table = document.getElementById("results");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+            // tr[i].style = "background-color: transparent";
+            // tr[i].style = null;
+            tr[i].removeAttribute("style")
+            tr[i].getElementsByTagName("td")[1].innerHTML = '';
+        }
+    }
+}
+
+function removeAll() {
+    var tbodyRef = document.getElementById('results').getElementsByTagName('tbody')[0];
+    var rows = tbodyRef.getElementsByTagName('tr');
+    for(var i = rows.length;i > 0;i--)
+    {
+        tbodyRef.deleteRow(i -1);
     }
 }

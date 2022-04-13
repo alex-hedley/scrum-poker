@@ -67,7 +67,7 @@
     <div>
         <h2>Results</h2>
 
-        <button>Remove All</button> <button>Delete Estimates</button> <button onclick="hide()">Hide</button> <button onclick="show()">Show</button>
+        <button onclick="removeAll()">Remove All</button> <button onclick="deleteEstimates()">Delete Estimates</button> <button onclick="hide()">Hide</button> <button onclick="show()">Show</button>
 
         <table id="results">
             <caption>Users</caption>
@@ -82,8 +82,14 @@
                 </tr>
             </thead>
             <tbody>
-                <td>Alex</td>
-                <td>0</td>
+                <tr>
+                    <td>Alex</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>0</td>
+                </tr>
             </tbody>
             <tfoot>
                 <tr>
