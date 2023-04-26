@@ -2,11 +2,107 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Wheel Picker</title>
+    <title>Scrum Poker</title>
 
     <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
+    
+    <div>
+        <card-t cid=Ah></card-t> <h1>Scrum Poker</h1>
+    </div>
+
+    <card-t
+        rank="0"
+        backcolor="#44F"
+        backtext="COPYRIGHT"
+        backtextcolor="black"
+        >
+    </card-t>
+
+    <card-t rank="1" suit="3" norank="1" opacity=".3" letters="    " pips="2"></card-t>
+    <card-t rank="1" suit="3" norank="1" cardcolor="transparent" opacity=".3" letters="    " pips="3"></card-t>
+    <card-t rank="1" suit="3" norank="1" opacity=".3" letters="    " pips="4"></card-t>
+    <card-t rank="1" suit="3" norank="1" opacity=".3" letters="    " pips="5"></card-t>
+    <card-t rank="1" suit="3" norank="1" opacity=".3" letters="    " pips="8"></card-t>
+    <card-t rank="1" suit="3" norank="1" opacity=".3" letters="    " pips="13"></card-t>
+    
+    <div id="Deck">
+
+        <div>
+            <!-- <div>?</div>
+            <div>0</div>
+            <div>0.5</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>5</div> -->
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="?"></card-t>
+            <card-t rank="0" backcolor="#44F" backtext="COPYRIGHT" backtextcolor="black" hide></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="0"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="1"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="2"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="3"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="5"></card-t>
+        </div>
+
+        <div>
+            <!-- <div>8</div>
+            <div>13</div>
+            <div>20</div>
+            <div>40</div>
+            <div>100</div> -->
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="8"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="13"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="20"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="40"></card-t>
+            <card-t suitcolor=",,black" cardcolor="dodgerblue" letters="100"></card-t>
+        </div>
+    
+        <card-t id=BigCardt cid=Kh svgmain="transform='rotate(5,0,0)'"></card-t>
+
+    </div>
+
+    <hr />
+
+    <div>
+        <h2>Results</h2>
+
+        <button onclick="removeAll()">Remove All</button> <button onclick="deleteEstimates()">Delete Estimates</button> <button onclick="hide()">Hide</button> <button onclick="show()">Show</button>
+
+        <table id="results">
+            <caption>Users</caption>
+            <colgroup>
+                <col>
+                <col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Story Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alex</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>John</td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    
+    <!-- <script src="scripts/cardmeister/elements.cardmeister.full.js"></script> -->
+    <script src="scripts/cardmeister/elements.cardmeister.min.js"></script>
     <script src="scripts/app.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
